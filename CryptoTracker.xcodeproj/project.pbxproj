@@ -11,16 +11,14 @@
 		202F96B4281563C600CF7330 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F96B3281563C600CF7330 /* ContentView.swift */; };
 		202F96B9281563C800CF7330 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 202F96B8281563C800CF7330 /* Preview Assets.xcassets */; };
 		202F96C9281565D400CF7330 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 202F96C8281565D400CF7330 /* Assets.xcassets */; };
-		202F96D22815665800CF7330 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F96CC2815665800CF7330 /* Date.swift */; };
-		202F96D32815665800CF7330 /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F96CD2815665800CF7330 /* PreviewProvider.swift */; };
-		202F96D42815665800CF7330 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F96CE2815665800CF7330 /* String.swift */; };
-		202F96D52815665800CF7330 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F96CF2815665800CF7330 /* Double.swift */; };
-		202F96D62815665800CF7330 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F96D02815665800CF7330 /* UIApplication.swift */; };
 		202F96D72815665800CF7330 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F96D12815665800CF7330 /* Color.swift */; };
 		202F96DC2815669300CF7330 /* MarketDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F96D92815669300CF7330 /* MarketDataModel.swift */; };
 		202F96DD2815669300CF7330 /* CoinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F96DA2815669300CF7330 /* CoinModel.swift */; };
 		202F96DE2815669300CF7330 /* CoinDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F96DB2815669300CF7330 /* CoinDetailModel.swift */; };
 		202F96E2281566BF00CF7330 /* PortfolioContainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 202F96E0281566BF00CF7330 /* PortfolioContainer.xcdatamodeld */; };
+		202F96F728156C6100CF7330 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F96F628156C6100CF7330 /* HomeScreen.swift */; };
+		202F96FE2815705600CF7330 /* BuildCircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F96FD2815705600CF7330 /* BuildCircleButton.swift */; };
+		202F97012815743700CF7330 /* BuildCircleButtonAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F97002815743700CF7330 /* BuildCircleButtonAnimation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,16 +28,14 @@
 		202F96B8281563C800CF7330 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		202F96BA281563C800CF7330 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		202F96C8281565D400CF7330 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		202F96CC2815665800CF7330 /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
-		202F96CD2815665800CF7330 /* PreviewProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
-		202F96CE2815665800CF7330 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
-		202F96CF2815665800CF7330 /* Double.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
-		202F96D02815665800CF7330 /* UIApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 		202F96D12815665800CF7330 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		202F96D92815669300CF7330 /* MarketDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketDataModel.swift; sourceTree = "<group>"; };
 		202F96DA2815669300CF7330 /* CoinModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinModel.swift; sourceTree = "<group>"; };
 		202F96DB2815669300CF7330 /* CoinDetailModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinDetailModel.swift; sourceTree = "<group>"; };
 		202F96E1281566BF00CF7330 /* PortfolioContainer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PortfolioContainer.xcdatamodel; sourceTree = "<group>"; };
+		202F96F628156C6100CF7330 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		202F96FD2815705600CF7330 /* BuildCircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildCircleButton.swift; sourceTree = "<group>"; };
+		202F97002815743700CF7330 /* BuildCircleButtonAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildCircleButtonAnimation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,8 +68,8 @@
 		202F96B0281563C600CF7330 /* CryptoTracker */ = {
 			isa = PBXGroup;
 			children = (
+				202F96F428156C3600CF7330 /* Screens */,
 				202F96C32815640100CF7330 /* Models */,
-				202F96C1281563DE00CF7330 /* UIs */,
 				202F96CB2815665800CF7330 /* Extensions */,
 				202F96C8281565D400CF7330 /* Assets.xcassets */,
 				202F96B1281563C600CF7330 /* CryptoTrackerApp.swift */,
@@ -92,21 +88,6 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		202F96C1281563DE00CF7330 /* UIs */ = {
-			isa = PBXGroup;
-			children = (
-				202F96C2281563EF00CF7330 /* Home */,
-			);
-			path = UIs;
-			sourceTree = "<group>";
-		};
-		202F96C2281563EF00CF7330 /* Home */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
 		202F96C32815640100CF7330 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,14 +102,43 @@
 		202F96CB2815665800CF7330 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				202F96CC2815665800CF7330 /* Date.swift */,
-				202F96CD2815665800CF7330 /* PreviewProvider.swift */,
-				202F96CE2815665800CF7330 /* String.swift */,
-				202F96CF2815665800CF7330 /* Double.swift */,
-				202F96D02815665800CF7330 /* UIApplication.swift */,
 				202F96D12815665800CF7330 /* Color.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		202F96F428156C3600CF7330 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				202F96F528156C4700CF7330 /* Home */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		202F96F528156C4700CF7330 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				202F96FB28156CA600CF7330 /* ViewModels */,
+				202F96FA28156C9C00CF7330 /* Components */,
+				202F96F628156C6100CF7330 /* HomeScreen.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		202F96FA28156C9C00CF7330 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				202F96FD2815705600CF7330 /* BuildCircleButton.swift */,
+				202F97002815743700CF7330 /* BuildCircleButtonAnimation.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		202F96FB28156CA600CF7330 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,14 +213,12 @@
 				202F96DD2815669300CF7330 /* CoinModel.swift in Sources */,
 				202F96B4281563C600CF7330 /* ContentView.swift in Sources */,
 				202F96DC2815669300CF7330 /* MarketDataModel.swift in Sources */,
-				202F96D62815665800CF7330 /* UIApplication.swift in Sources */,
-				202F96D32815665800CF7330 /* PreviewProvider.swift in Sources */,
-				202F96D42815665800CF7330 /* String.swift in Sources */,
-				202F96D22815665800CF7330 /* Date.swift in Sources */,
+				202F96FE2815705600CF7330 /* BuildCircleButton.swift in Sources */,
+				202F97012815743700CF7330 /* BuildCircleButtonAnimation.swift in Sources */,
 				202F96DE2815669300CF7330 /* CoinDetailModel.swift in Sources */,
+				202F96F728156C6100CF7330 /* HomeScreen.swift in Sources */,
 				202F96E2281566BF00CF7330 /* PortfolioContainer.xcdatamodeld in Sources */,
 				202F96D72815665800CF7330 /* Color.swift in Sources */,
-				202F96D52815665800CF7330 /* Double.swift in Sources */,
 				202F96B2281563C600CF7330 /* CryptoTrackerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
