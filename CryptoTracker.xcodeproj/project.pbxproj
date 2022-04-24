@@ -9,17 +9,37 @@
 /* Begin PBXBuildFile section */
 		202F96B2281563C600CF7330 /* CryptoTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F96B1281563C600CF7330 /* CryptoTrackerApp.swift */; };
 		202F96B4281563C600CF7330 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F96B3281563C600CF7330 /* ContentView.swift */; };
-		202F96B6281563C800CF7330 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 202F96B5281563C800CF7330 /* Assets.xcassets */; };
 		202F96B9281563C800CF7330 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 202F96B8281563C800CF7330 /* Preview Assets.xcassets */; };
+		202F96C9281565D400CF7330 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 202F96C8281565D400CF7330 /* Assets.xcassets */; };
+		202F96D22815665800CF7330 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F96CC2815665800CF7330 /* Date.swift */; };
+		202F96D32815665800CF7330 /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F96CD2815665800CF7330 /* PreviewProvider.swift */; };
+		202F96D42815665800CF7330 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F96CE2815665800CF7330 /* String.swift */; };
+		202F96D52815665800CF7330 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F96CF2815665800CF7330 /* Double.swift */; };
+		202F96D62815665800CF7330 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F96D02815665800CF7330 /* UIApplication.swift */; };
+		202F96D72815665800CF7330 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F96D12815665800CF7330 /* Color.swift */; };
+		202F96DC2815669300CF7330 /* MarketDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F96D92815669300CF7330 /* MarketDataModel.swift */; };
+		202F96DD2815669300CF7330 /* CoinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F96DA2815669300CF7330 /* CoinModel.swift */; };
+		202F96DE2815669300CF7330 /* CoinDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F96DB2815669300CF7330 /* CoinDetailModel.swift */; };
+		202F96E2281566BF00CF7330 /* PortfolioContainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 202F96E0281566BF00CF7330 /* PortfolioContainer.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		202F96AE281563C600CF7330 /* CryptoTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		202F96B1281563C600CF7330 /* CryptoTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoTrackerApp.swift; sourceTree = "<group>"; };
 		202F96B3281563C600CF7330 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		202F96B5281563C800CF7330 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		202F96B8281563C800CF7330 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		202F96BA281563C800CF7330 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		202F96C8281565D400CF7330 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		202F96CC2815665800CF7330 /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		202F96CD2815665800CF7330 /* PreviewProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
+		202F96CE2815665800CF7330 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		202F96CF2815665800CF7330 /* Double.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		202F96D02815665800CF7330 /* UIApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
+		202F96D12815665800CF7330 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		202F96D92815669300CF7330 /* MarketDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketDataModel.swift; sourceTree = "<group>"; };
+		202F96DA2815669300CF7330 /* CoinModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinModel.swift; sourceTree = "<group>"; };
+		202F96DB2815669300CF7330 /* CoinDetailModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinDetailModel.swift; sourceTree = "<group>"; };
+		202F96E1281566BF00CF7330 /* PortfolioContainer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PortfolioContainer.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,12 +72,12 @@
 		202F96B0281563C600CF7330 /* CryptoTracker */ = {
 			isa = PBXGroup;
 			children = (
-				202F96C52815641700CF7330 /* Extensions */,
 				202F96C32815640100CF7330 /* Models */,
 				202F96C1281563DE00CF7330 /* UIs */,
+				202F96CB2815665800CF7330 /* Extensions */,
+				202F96C8281565D400CF7330 /* Assets.xcassets */,
 				202F96B1281563C600CF7330 /* CryptoTrackerApp.swift */,
 				202F96B3281563C600CF7330 /* ContentView.swift */,
-				202F96B5281563C800CF7330 /* Assets.xcassets */,
 				202F96BA281563C800CF7330 /* Info.plist */,
 				202F96B7281563C800CF7330 /* Preview Content */,
 			);
@@ -90,13 +110,23 @@
 		202F96C32815640100CF7330 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				202F96E0281566BF00CF7330 /* PortfolioContainer.xcdatamodeld */,
+				202F96DB2815669300CF7330 /* CoinDetailModel.swift */,
+				202F96DA2815669300CF7330 /* CoinModel.swift */,
+				202F96D92815669300CF7330 /* MarketDataModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		202F96C52815641700CF7330 /* Extensions */ = {
+		202F96CB2815665800CF7330 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				202F96CC2815665800CF7330 /* Date.swift */,
+				202F96CD2815665800CF7330 /* PreviewProvider.swift */,
+				202F96CE2815665800CF7330 /* String.swift */,
+				202F96CF2815665800CF7330 /* Double.swift */,
+				202F96D02815665800CF7330 /* UIApplication.swift */,
+				202F96D12815665800CF7330 /* Color.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -158,8 +188,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				202F96C9281565D400CF7330 /* Assets.xcassets in Resources */,
 				202F96B9281563C800CF7330 /* Preview Assets.xcassets in Resources */,
-				202F96B6281563C800CF7330 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,7 +200,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				202F96DD2815669300CF7330 /* CoinModel.swift in Sources */,
 				202F96B4281563C600CF7330 /* ContentView.swift in Sources */,
+				202F96DC2815669300CF7330 /* MarketDataModel.swift in Sources */,
+				202F96D62815665800CF7330 /* UIApplication.swift in Sources */,
+				202F96D32815665800CF7330 /* PreviewProvider.swift in Sources */,
+				202F96D42815665800CF7330 /* String.swift in Sources */,
+				202F96D22815665800CF7330 /* Date.swift in Sources */,
+				202F96DE2815669300CF7330 /* CoinDetailModel.swift in Sources */,
+				202F96E2281566BF00CF7330 /* PortfolioContainer.xcdatamodeld in Sources */,
+				202F96D72815665800CF7330 /* Color.swift in Sources */,
+				202F96D52815665800CF7330 /* Double.swift in Sources */,
 				202F96B2281563C600CF7330 /* CryptoTrackerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,6 +400,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		202F96E0281566BF00CF7330 /* PortfolioContainer.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				202F96E1281566BF00CF7330 /* PortfolioContainer.xcdatamodel */,
+			);
+			currentVersion = 202F96E1281566BF00CF7330 /* PortfolioContainer.xcdatamodel */;
+			path = PortfolioContainer.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 202F96A6281563C600CF7330 /* Project object */;
 }
