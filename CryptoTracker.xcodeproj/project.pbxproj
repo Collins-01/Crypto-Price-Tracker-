@@ -52,6 +52,9 @@
 		202F96B0281563C600CF7330 /* CryptoTracker */ = {
 			isa = PBXGroup;
 			children = (
+				202F96C52815641700CF7330 /* Extensions */,
+				202F96C32815640100CF7330 /* Models */,
+				202F96C1281563DE00CF7330 /* UIs */,
 				202F96B1281563C600CF7330 /* CryptoTrackerApp.swift */,
 				202F96B3281563C600CF7330 /* ContentView.swift */,
 				202F96B5281563C800CF7330 /* Assets.xcassets */,
@@ -67,6 +70,35 @@
 				202F96B8281563C800CF7330 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		202F96C1281563DE00CF7330 /* UIs */ = {
+			isa = PBXGroup;
+			children = (
+				202F96C2281563EF00CF7330 /* Home */,
+			);
+			path = UIs;
+			sourceTree = "<group>";
+		};
+		202F96C2281563EF00CF7330 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		202F96C32815640100CF7330 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		202F96C52815641700CF7330 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
