@@ -6,35 +6,26 @@
 //
 
 import Foundation
-
+import Combine
 
 class CoinDataService {
+    
+    var cancellable = Set<AnyCancellable>()
+    var coinSubscription: AnyCancellable?
+    
     @Published var allCoins: [CoinModel] = []
     
-    
     init() {
-        getCoins()
+        getAllCoins()
     }
     
-    private  func getCoins()  {
-        guard let url = URL(string: "") else {
-            return
-        }
-        
-        URLSession.shared.dataTaskPublisher(for: url)
-            .receive(on: DispatchQueue.global(qos: .default))
-        
-        
-        
-        
-//            .subscribe(on: DispatchQueue.global(qos: .default))
-//            .tryMap{ ( output ) -> Data in
-//                guard let response = output.response  as? HTTPURLResponse, response.statusCode >=200 && response.statusCode < 300  else {
-//                    throw URLError(.badServerResponse)
-//                }
-//                //
-//
-//
-//            }
+    
+    private  func getAllCoins() {
+        coinSubscription =  NetworkService.get(url: EndPoints.getAllCoins)
+            .decode(type: [CoinModel].self, decoder: JSONDecoder())
+            .sink(receiveCompletion: NetworkService.handleCompletion, receiveValue: { [weak self] ( returnedCoins) in
+                self?.allCoins = returnedCoins
+                self?.coinSubscription?.cancel()
+            })
     }
 }

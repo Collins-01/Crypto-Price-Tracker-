@@ -8,7 +8,7 @@
 import Foundation
 
 
-enum APiError: Error {
+enum ApiError: Error {
     case decodingError
     case unknown
     case errorCode(Int)
@@ -16,7 +16,7 @@ enum APiError: Error {
 }
 
 
-extension APiError: LocalizedError{
+extension ApiError: LocalizedError{
     var errorDescription: String? {
         switch self {
         case .decodingError: return "An Error Occured whild Decoding Data"
