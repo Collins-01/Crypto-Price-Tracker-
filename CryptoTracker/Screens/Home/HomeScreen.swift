@@ -14,7 +14,7 @@ struct HomeScreen: View {
             Color.theme.background
                 .ignoresSafeArea()
             VStack{
-              homeHeader
+                homeHeader
                 Spacer()
             }
         }
@@ -33,7 +33,7 @@ extension HomeScreen {
         HStack{
             
             BuildCircleButton(iconName: showPortfolio ? "plus" : "info")
-//                        .animation(.none)
+                .animation(.none)
                 .background(BuildCircleButtonAnimation(animate: $showPortfolio))
             
             Spacer()
