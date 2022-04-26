@@ -32,6 +32,7 @@
 		20E8C7C12816AB9000530F1D /* HomeScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E8C7C02816AB9000530F1D /* HomeScreenViewModel.swift */; };
 		20F44505281707B800CA05B6 /* NetworkServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F44504281707B800CA05B6 /* NetworkServiceProtocol.swift */; };
 		20F44508281708C200CA05B6 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F44507281708C200CA05B6 /* NetworkService.swift */; };
+		20FA79C62818362C00F94E33 /* LocalFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FA79C52818362C00F94E33 /* LocalFileManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		20E8C7C02816AB9000530F1D /* HomeScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewModel.swift; sourceTree = "<group>"; };
 		20F44504281707B800CA05B6 /* NetworkServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceProtocol.swift; sourceTree = "<group>"; };
 		20F44507281708C200CA05B6 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		20FA79C52818362C00F94E33 /* LocalFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFileManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 		202F96B0281563C600CF7330 /* CryptoTracker */ = {
 			isa = PBXGroup;
 			children = (
+				20FA79C42818360F00F94E33 /* Storage */,
 				2018F90928171C1500FF7424 /* States */,
 				20D6C9AC2816DC16008A377B /* Errors */,
 				20D6C99E2816D1A7008A377B /* Services */,
@@ -228,6 +231,14 @@
 			path = NetworkLayer;
 			sourceTree = "<group>";
 		};
+		20FA79C42818360F00F94E33 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				20FA79C52818362C00F94E33 /* LocalFileManager.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -320,6 +331,7 @@
 				202F96B2281563C600CF7330 /* CryptoTrackerApp.swift in Sources */,
 				2061C9C028173D8400AEEFDD /* BuildCoinImageViewModel.swift in Sources */,
 				2018F90B28171C2C00FF7424 /* ApiResponseState.swift in Sources */,
+				20FA79C62818362C00F94E33 /* LocalFileManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

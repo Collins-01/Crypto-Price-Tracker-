@@ -13,6 +13,9 @@ import Combine
 
 class ImageService {
     @Published var image: UIImage? = nil
+    private let fileManager = LocalFileManager.instance
+    private let folderName = "coin_images"
+    private let imageName: String
     private var coin: CoinModel
     private var imageSubscribtion: AnyCancellable?
     private func getImage() {
@@ -23,15 +26,32 @@ class ImageService {
             .tryMap { (data) -> UIImage? in
                 return  UIImage(data: data)
             }
-            .sink(receiveCompletion: NetworkService.handleCompletion) { [weak self] (recivedImage) in
-                self?.image = recivedImage
-                self?.imageSubscribtion?.cancel()
+            .sink(receiveCompletion: NetworkService.handleCompletion) { [weak self] (recievedImage) in
+                guard let self = self , let downloadedImage = recievedImage else { return }
+                self.image = recievedImage
+                self.imageSubscribtion?.cancel()
+                self.fileManager.saveImage(image: downloadedImage, imageName: self.imageName, folderName: self.folderName)
             }
         
         
     }
+//    Init Method
     init(coin: CoinModel) {
         self.coin = coin
-        getImage()
+        self.imageName = coin.id
+        getCoinImage()
+    }
+    
+    
+    
+    
+    func getCoinImage() {
+        if let savedImage = fileManager.getImage(folderName: folderName, imageName: imageName) {
+            image = savedImage
+            print("Retrieved Image from File Successfully")
+        }
+        else {
+            getImage()
+        }
     }
 }
