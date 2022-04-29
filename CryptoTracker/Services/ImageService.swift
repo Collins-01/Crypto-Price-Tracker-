@@ -18,6 +18,7 @@ class ImageService {
     private let imageName: String
     private var coin: CoinModel
     private var imageSubscribtion: AnyCancellable?
+//    Makes the network call for downloading the images
     private func getImage() {
         guard let url = URL(string: coin.image) else {
             return

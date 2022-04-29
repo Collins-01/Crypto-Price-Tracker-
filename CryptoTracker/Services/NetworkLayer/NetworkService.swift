@@ -10,7 +10,6 @@ import Combine
 
 
 class NetworkService {
-    
     enum NetworkingError: LocalizedError {
         case badUrlResponse(url: URL)
         case unknown
@@ -35,6 +34,7 @@ class NetworkService {
     }
     
     
+//    Check s if we have a status code ranging from (200 to 299)
     static func handleUrlResponse (output: URLSession.DataTaskPublisher.Output, url: URL ) throws -> Data {
         
         guard let response = output.response as? HTTPURLResponse , (200...299).contains(response.statusCode) else {

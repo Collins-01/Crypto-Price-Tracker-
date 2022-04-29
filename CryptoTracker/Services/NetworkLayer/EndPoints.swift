@@ -10,6 +10,7 @@ import Foundation
 
 struct EndPoints {
     private static let api: String = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=true&price_change_percentage=24h"
+    private static let marketData: String = "https://api.coingecko.com/api/v3/global"
     static var allCoins: URLRequest {
         let url: URL = URL(string: api)!
         return URLRequest(url: url)
@@ -18,5 +19,9 @@ struct EndPoints {
     
     static var getAllCoins: URL {
         return URL(string: api)!
+    }
+    
+    static var getMarketData: URL {
+        return URL(string: marketData)!
     }
 }

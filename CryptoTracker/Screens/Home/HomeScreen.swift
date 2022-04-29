@@ -10,12 +10,18 @@ import SwiftUI
 struct HomeScreen: View {
     @EnvironmentObject private var vm : HomeScreenViewModel
     @State private var showPortfolio: Bool = false
+    @State private var showPortfolioView: Bool = false
     var body: some View {
         ZStack{
             Color.theme.background
                 .ignoresSafeArea()
+                .sheet(isPresented: $showPortfolioView, content: {
+                    PortfolioScreen().environmentObject(vm)
+                })
             VStack{
                 homeHeader
+                HomeStatsScreen(showPortfolio: $showPortfolio)
+                SearchBarView(searchText: $vm.searchText)
                columnTitles
                 .foregroundColor(Color.theme.secondaryText)
                 if !showPortfolio {
@@ -52,6 +58,11 @@ extension HomeScreen {
             
             BuildCircleButton(iconName: showPortfolio ? "plus" : "info")
                 .animation(.none)
+                .onTapGesture{
+                    if showPortfolio {
+                        showPortfolioView.toggle()
+                    }
+                }
                 .background(BuildCircleButtonAnimation(animate: $showPortfolio))
             
             Spacer()
