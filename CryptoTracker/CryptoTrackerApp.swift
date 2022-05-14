@@ -19,8 +19,10 @@ struct CryptoTrackerApp: App {
             NavigationView{
                 HomeScreen()
                     .navigationBarHidden(true)
+                
             }
             .environmentObject(viewModel)
+//            LoginScreen()
             
         }
         

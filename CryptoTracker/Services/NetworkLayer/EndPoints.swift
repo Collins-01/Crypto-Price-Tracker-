@@ -24,4 +24,8 @@ struct EndPoints {
     static var getMarketData: URL {
         return URL(string: marketData)!
     }
+    static var login: URL {
+        return URL(string: "https://api.itarashop.ng/api/v1/accounts/login")!
+    }
 }
+    

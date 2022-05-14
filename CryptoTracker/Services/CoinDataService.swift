@@ -20,7 +20,7 @@ class CoinDataService {
     }
     
     
-    private  func getAllCoins() {
+    public  func getAllCoins() {
         coinSubscription =  NetworkService.get(url: EndPoints.getAllCoins)
             .decode(type: [CoinModel].self, decoder: JSONDecoder())
             .sink(receiveCompletion: NetworkService.handleCompletion, receiveValue: { [weak self] ( returnedCoins) in

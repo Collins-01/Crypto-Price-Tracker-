@@ -21,7 +21,7 @@ class MarketDataService {
     }
     
     
-    private  func getMarketData() {
+    public  func getMarketData() {
         marketDataSubscription =  NetworkService.get(url: EndPoints.getMarketData)
             .decode(type: GlobalData.self, decoder: JSONDecoder())
             .sink(receiveCompletion: NetworkService.handleCompletion, receiveValue: { [weak self] ( returnedGlobalData) in

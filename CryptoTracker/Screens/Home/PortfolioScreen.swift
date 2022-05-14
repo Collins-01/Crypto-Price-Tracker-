@@ -40,6 +40,11 @@ struct PortfolioScreen: View {
                     trailingNavBarButtons
                 }
             })
+            .onChange(of: vm.searchText, perform: { value in
+                if value == "" {
+                    removeSelectedCoin()
+                }
+            })
         }
     }
 }
@@ -129,9 +134,10 @@ extension PortfolioScreen {
     }
     
     private func saveButtonPressed() {
-        guard let coin = selectedCoin else {
+        guard let coin = selectedCoin, let amount = Double(quantityText) else {
             return
         }
+        vm.updatePortfolio(coin: coin, amount: amount)
         withAnimation(.easeOut) {
             showCheckMark = true
             removeSelectedCoin()
