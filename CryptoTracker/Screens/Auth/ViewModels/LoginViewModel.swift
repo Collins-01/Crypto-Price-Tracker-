@@ -24,8 +24,8 @@ class LoginViewModel : ObservableObject {
     }
       
     func login(){
-        isLoading = true
-         authService.login(email: email, password: password)
+//        isLoading = true
+//         authService.login(email: email, password: password)
 //        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
 //            self.isLoading = false
 //            self.hasError = true
