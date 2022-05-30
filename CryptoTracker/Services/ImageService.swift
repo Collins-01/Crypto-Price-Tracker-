@@ -49,7 +49,7 @@ class ImageService {
     func getCoinImage() {
         if let savedImage = fileManager.getImage(folderName: folderName, imageName: imageName) {
             image = savedImage
-            print("Retrieved Image from File Successfully")
+            print("Retrieved Image from File Successfully::: \(image.debugDescription)")
         }
         else {
             getImage()
