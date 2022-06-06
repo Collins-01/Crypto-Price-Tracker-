@@ -24,6 +24,12 @@ struct EndPoints {
     static var getMarketData: URL {
         return URL(string: marketData)!
     }
-  
+//    static var getCointDetails: URL {
+//        return URL(string: "https://api.coingecko.com/api/v3/coins/bitcoin?localization=false&tickers=false&market_data=false&community_data=false&developer_data=false&sparkline=false")!
+//    }
+    
+    static func coinDetails(id: String) -> URL {
+        return URL(string: "https://api.coingecko.com/api/v3/coins/\(id)?localization=false&tickers=false&market_data=false&community_data=false&developer_data=false&sparkline=false")!
+    }
 }
     

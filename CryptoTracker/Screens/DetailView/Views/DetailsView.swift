@@ -21,16 +21,18 @@ struct DetailLoadingView: View {
 
 
 struct DetailsView: View {
-     var coin:CoinModel
+    // We are doing this because we need to get the coin object, and it can only be accesed when the class is being initialized, i.e at the constructur. So we do here is that we use DI (Dependency Injection) Method to achieve this.
+        
+    @StateObject var vm: CoinDetailViewModel
     init(coin: CoinModel){
-        self.coin = coin
+        _vm = StateObject(wrappedValue: CoinDetailViewModel(coin: coin))
         print("Initialising Detail View for \(coin.name)")
     }
+     
     var body: some View {
         ZStack {
-            if let coin = coin {
-                Text(coin.name)
-            }
+            Text("Hello ")
+
         }
     }
 }
