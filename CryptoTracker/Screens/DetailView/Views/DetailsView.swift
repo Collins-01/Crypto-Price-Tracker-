@@ -36,48 +36,31 @@ struct DetailsView: View {
      
     var body: some View {
         ScrollView{
-            VStack(spacing: 20){
-                Text("Hello World")
-                    .frame(height: 150)
-                Text("Overview")
-                    .font(.title)
-                    .bold()
-                    .foregroundColor(Color.theme.accent)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                Divider()
-                
-                LazyVGrid(columns: columns,
-                          alignment: .center,
-                          spacing: spacing,
-                          pinnedViews: [],
-                          
-                          content: {
-//
-                    ForEach(vm.overviewStatistics) { stat in
-                        StatisticsView(stat: StatisticsModel(title: stat.title, value: stat.value))
-                    }
-                })
-                
-                Text("Additional Details")
-                    .font(.title)
-                    .bold()
-                    .foregroundColor(Color.theme.accent)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                Divider()
-                LazyVGrid(columns: columns,
-                          alignment: .center,
-                          spacing: spacing,
-                          pinnedViews: [],
-                          
-                          content: {
-//
-                    ForEach(vm.additionalStatistics) { stat in
-                        StatisticsView(stat: StatisticsModel(title: stat.title, value: stat.value))
-                    }
-                })
-            }
-            .padding()
             
+            VStack{
+                ChartView(coin: vm.coin)
+                    .padding(.vertical)
+                VStack(spacing: 20){
+                 
+                  overview
+                    Divider()
+                   overviewGrid
+                   additionalTitle
+                    Divider()
+                   additionalGrid
+                }
+                .padding()
+            }
+           
+            
+        }
+        .navigationBarTitle(vm.coin.name)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                navigationBarTrailingItems
+             
+                   
+            }
         }
     }
 }
@@ -86,10 +69,68 @@ struct DetailsView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
             DetailsView(coin: dev.coin)
-                .navigationTitle(dev.coin.name)
+//
         }
     }
 }
 
 
 
+
+
+extension DetailsView{
+    
+    private var navigationBarTrailingItems: some View{
+        HStack{
+            Text(vm.coin.symbol.uppercased())
+                .font(.headline)
+                .foregroundColor(Color.theme.secondaryText)
+            BuildCoinImage(coinModel: vm.coin)
+                .frame(width: 25, height: 25)
+        }
+    }
+    private var overview: some View {
+        Text("Overview")
+            .font(.title)
+            .bold()
+            .foregroundColor(Color.theme.accent)
+            .frame(maxWidth: .infinity, alignment: .leading)
+    }
+    
+    private var additionalTitle: some View{
+        Text("Additional Details")
+            .font(.title)
+            .bold()
+            .foregroundColor(Color.theme.accent)
+            .frame(maxWidth: .infinity, alignment: .leading)
+    }
+    
+    private var overviewGrid: some View{
+        LazyVGrid(columns: columns,
+                  alignment: .center,
+                  spacing: spacing,
+                  pinnedViews: [],
+                  
+                  content: {
+//
+            ForEach(vm.overviewStatistics) { stat in
+                StatisticsView(stat: StatisticsModel(title: stat.title, value: stat.value, percentageChange: stat.percentageChange))
+            }
+        })
+    }
+    
+    
+    private var additionalGrid: some View {
+        LazyVGrid(columns: columns,
+                  alignment: .center,
+                  spacing: spacing,
+                  pinnedViews: [],
+                  
+                  content: {
+//
+            ForEach(vm.additionalStatistics) { stat in
+                StatisticsView(stat: StatisticsModel(title: stat.title, value: stat.value,percentageChange: stat.percentageChange))
+            }
+        })
+    }
+}
