@@ -11,6 +11,9 @@ import Combine
 class CoinDetailViewModel: ObservableObject {
     private let  coinDetailService: CoinDetailDataService
     private var cancellables = Set<AnyCancellable> ()
+    @Published var coinDescription: String? = nil
+    @Published var websiteURL: String? = nil
+    @Published var redditURL: String? = nil
     @Published var overviewStatistics: [StatisticsModel] = []
     @Published var additionalStatistics: [StatisticsModel] = [ ]
     @Published  var coin: CoinModel
@@ -36,6 +39,14 @@ class CoinDetailViewModel: ObservableObject {
          
         }
       .store(in: &cancellables)
+        coinDetailService.$coinDetail.sink { [weak self] (returnedCoin) in
+            self?.coinDescription = returnedCoin?.readableDescription
+            self?.redditURL = returnedCoin?.links?.subredditURL
+            self?.websiteURL = returnedCoin?.links?.homepage?.first
+            
+            
+        }
+        .store(in: &cancellables)
     }
     
     

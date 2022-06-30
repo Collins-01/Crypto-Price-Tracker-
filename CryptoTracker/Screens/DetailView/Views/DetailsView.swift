@@ -24,6 +24,7 @@ struct DetailsView: View {
     // We are doing this because we need to get the coin object, and it can only be accesed when the class is being initialized, i.e at the constructur. So we do here is that we use DI (Dependency Injection) Method to achieve this.
         
     @StateObject private  var vm: CoinDetailViewModel
+    @State var showFullDescription : Bool = false
     private  let spacing:CGFloat = 30
     private let columns: [GridItem] = [
         GridItem(.flexible()),
@@ -41,13 +42,16 @@ struct DetailsView: View {
                 ChartView(coin: vm.coin)
                     .padding(.vertical)
                 VStack(spacing: 20){
-                 
+                  
                   overview
                     Divider()
+                   descriptionSection
                    overviewGrid
                    additionalTitle
                     Divider()
                    additionalGrid
+                    
+                  websiteSection
                 }
                 .padding()
             }
@@ -132,5 +136,48 @@ extension DetailsView{
                 StatisticsView(stat: StatisticsModel(title: stat.title, value: stat.value,percentageChange: stat.percentageChange))
             }
         })
+    }
+    
+    
+    private var descriptionSection : some View {
+        ZStack {
+            if let coinDescription = vm.coinDescription, !coinDescription.isEmpty {
+                VStack (alignment: .leading) {
+                    Text(coinDescription )
+                        .lineLimit(showFullDescription ? nil : 3)
+                        .foregroundColor(Color.theme.secondaryText)
+                        .font(.callout )
+                
+                    Button {
+                        withAnimation(.easeInOut) {
+                            showFullDescription.toggle()
+                        }
+                    } label: {
+                        Text( showFullDescription ?  "Less.." : "Read More..")
+                            .font(.caption)
+                            .fontWeight(.bold)
+                            .padding(.vertical, 4)
+                    }
+                    .accentColor(Color.blue)
+
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
+            }
+            
+        }
+    }
+    
+    private var websiteSection: some View {
+        VStack(alignment : .leading, spacing: 10) {
+                if let website = vm.websiteURL , let webURL = URL(string: website) {
+                     Link("Website", destination: webURL)
+                }
+                if let reddit = vm.redditURL , let redditURL = URL(string: reddit) {
+                     Link("Reddit", destination: redditURL)
+                }
+            }
+        
+        .accentColor(.blue)
+        .frame(maxWidth: .infinity, alignment: .leading)
     }
 }
