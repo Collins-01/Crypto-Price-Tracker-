@@ -9,7 +9,8 @@ import SwiftUI
 
 struct HomeScreen: View {
     @EnvironmentObject private var vm : HomeScreenViewModel
-    @State private var showPortfolio: Bool = false
+    @State private var showSettingsView: Bool = false //new sheet.
+    @State private var showPortfolio: Bool = false //new sheet
     @State private var showPortfolioView: Bool = false
     @State private var selectedCoin: CoinModel? = nil
     @State private var showDetailsView: Bool = false
@@ -36,6 +37,9 @@ struct HomeScreen: View {
                 }
                 
                 Spacer()
+            }
+            .sheet(isPresented: $showSettingsView) {
+                SettingsView()
             }
         }
         .background(NavigationLink(
@@ -71,6 +75,9 @@ extension HomeScreen {
                     print("Hello")
                     if showPortfolio {
                         showPortfolioView.toggle()
+                    }
+                    else {
+                        showSettingsView.toggle()
                     }
                 }
                 .background(BuildCircleButtonAnimation(animate: $showPortfolio))

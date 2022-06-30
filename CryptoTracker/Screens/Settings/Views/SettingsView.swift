@@ -22,6 +22,7 @@ struct SettingsView: View {
             socialInfoSection
             coinGeckoInfoSection
             developerDescriptionSection
+            applicationSection
             }
             .navigationTitle("Settings")
             .toolbar {
@@ -63,7 +64,7 @@ extension SettingsView {
             Link("Github 💻", destination: githubURL)
             Link("Twitter 🐣", destination: twitterURL)
             Link("Youtube 🎬", destination: youtubURL)
-            Link("Coffee 🎬", destination: coffeeURL)
+            Link("Coffee ☕️", destination: coffeeURL)
             
         } )
         .accentColor(.blue)
@@ -89,11 +90,11 @@ extension SettingsView {
     }
     
     private var developerDescriptionSection: some View {
-        Section(header: Text("CoinGecko"), footer: Text("Footer"), content: {
+        Section(header: Text("CoinGecko"), footer: Text(""), content: {
             VStack{
-                Image("coingecko")
+                Image("logo")
                     .resizable()
-                    .frame(height: 100)
+                    .frame(width: 100,height: 100)
                     .clipShape(RoundedRectangle(cornerRadius: 20))
                 
             }
@@ -107,4 +108,16 @@ extension SettingsView {
         } )
         .accentColor(.blue)
     }
+    
+    private var applicationSection: some View {
+        Section(header: Text("Application"), footer: Text(""), content: {
+
+            Link("Terms of Service", destination: coinGeckoURL)
+            Link("Privacy Policy", destination: coinGeckoURL)
+            Link("Company Website", destination: coinGeckoURL)
+            Link("Learn More", destination: coinGeckoURL)
+        } )
+        .accentColor(.blue)
+    }
+    
 }
