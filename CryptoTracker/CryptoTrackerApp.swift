@@ -20,15 +20,17 @@ struct CryptoTrackerApp: App {
             ZStack {
                 NavigationView{
                     HomeScreen()
+                        
                         .navigationBarHidden(true)
                     
                 }
+                .navigationViewStyle(StackNavigationViewStyle())
                 .environmentObject(viewModel)
                 
                 
                 ZStack {
                     if showLaunchView {
-                        LaunchView(showLaunchView: showLaunchView)
+                        LaunchView(showLaunchView: $showLaunchView)
                             .transition(.move(edge: .leading))
                     }
                 }

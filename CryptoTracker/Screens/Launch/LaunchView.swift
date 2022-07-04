@@ -13,7 +13,7 @@ struct LaunchView: View {
     private   let timer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
     @State private var counter: Int = 0
     @State private var loops: Int = 0
-    @State var showLaunchView: Bool = false
+    @Binding var showLaunchView: Bool
     var body: some View {
         ZStack {
             Color.launch.background
@@ -67,6 +67,6 @@ struct LaunchView: View {
 
 struct LaunchView_Previews: PreviewProvider {
     static var previews: some View {
-        LaunchView(showLaunchView: true)
+        LaunchView(showLaunchView: .constant(true))
     }
 }
